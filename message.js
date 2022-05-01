@@ -1,15 +1,9 @@
-// let message= prompt("what is your name??");
-// alert(message);
-
-alert("Hello! welcome \n fill out the form please");
-
-let first = prompt("What is your name? ");
+let firstName = prompt("what is your first name? ");
+let lastName = prompt("what is your last name? ");
+let age = prompt("how old are you? ");
 let gender = prompt("what is your gender? ");
-let age = prompt("How old are you? ");
-alert( first + ' '+ gender + ' ' + age);
+alert(`first name: ${firstName} , last name: ${lastName} , your age is ${age} and your gender is ${gender}`);
+let biography = `first name: ${firstName} , last name: ${lastName} , age: ${age} , gender: ${gender}`;
 
-
-let dayofbirth = prompt("what is day of your birthday?");
-let yearofbirth = prompt("In what year were you born? ");
-alert("dayofbirth : "+ dayofbirth + " yearofbirth : " + yearofbirth);
-alert("dayofbirth : "+ yearofbirth + " yearofbirth : "+ dayofbirth );
+alert(biography);
+document.getElementById("bio").innerHTML = biography;
