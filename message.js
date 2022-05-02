@@ -6,7 +6,7 @@ function rand(z,t)
 console.log(rand(31,67));
 // II.
 let binary= "101100111101"
-function bin2doc(str){
+function bin2dec(str){
  return parseInt (str,2)
 }
-console.log(bin2doc(binary))
+console.log(bin2dec(binary))
