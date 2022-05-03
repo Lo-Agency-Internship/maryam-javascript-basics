@@ -142,15 +142,15 @@ function logicalGateXnor(w,v){
   
   // factorial
   // I.
-  function factorialiterative(fn1){
-    if (fn1 > 0){
+  function factorialiterative(x){
+    if (x > 0){
       let y= 1;
-      for(let i=1;i <= fn1;i++){
+      for(let i=1;i <= x;i++){
         y = y * i
       }
       return y
     }
-    else if (fn1===0){
+    else if (x===0){
       return 1
     }
     else {
@@ -158,22 +158,22 @@ function logicalGateXnor(w,v){
     }
   }
  
-  console.log(factorialiterative(fn1=5))
+  console.log(factorialiterative(x=5))
 
   // II.
-  function factorialrecursive(fn2){
-     if(fn2 >0){
+  function factorialrecursive(x){
+     if(x >0){
        let y=1
-       for(let i=1;i <= fn2;i++){
+       for(let i=1;i <= x;i++){
         y = i * factorialrecursive(i-1)
       }
       return y
      }
-     else if(fn2===0){
+     else if(x===0){
        return 1
      }
      else{
        return "your number is incalculable"
      }
   }
-  console.log(factorialrecursive(fn2=3))
+  console.log(factorialrecursive(x=3))
