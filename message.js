@@ -1,30 +1,30 @@
-// hello-world
-let message= prompt("what is your name??");
-alert(message);
-// variables
-alert("Hello! welcome \n fill out the form please");
+// // hello-world
+// let message= prompt("what is your name??");
+// alert(message);
+// // variables
+// alert("Hello! welcome \n fill out the form please");
 
-let first = prompt("What is your name? ");
-let gender = prompt("what is your gender? ");
-let age = prompt("How old are you? ");
-alert( first + ' '+ gender + ' ' + age);
+// let first = prompt("What is your name? ");
+// let gender = prompt("what is your gender? ");
+// let age = prompt("How old are you? ");
+// alert( first + ' '+ gender + ' ' + age);
 
 
-let dayofbirth = prompt("what is day of your birthday?");
-let yearofbirth = prompt("In what year were you born? ");
-alert("dayofbirth : "+ dayofbirth + " yearofbirth : " + yearofbirth);
-alert("dayofbirth : "+ yearofbirth + " yearofbirth : "+ dayofbirth );
+// let dayofbirth = prompt("what is day of your birthday?");
+// let yearofbirth = prompt("In what year were you born? ");
+// alert("dayofbirth : "+ dayofbirth + " yearofbirth : " + yearofbirth);
+// alert("dayofbirth : "+ yearofbirth + " yearofbirth : "+ dayofbirth );
 
-// data-type
-let firstName = prompt("what is your first name? ");
-let lastName = prompt("what is your last name? ");
-let sen = prompt("how old are you? ");
-let sex = prompt("what is your gender? ");
-alert(`first name: ${firstName} , last name: ${lastName} , your age is ${sen} and your gender is ${sex}`);
-let biography = `first name: ${firstName} , last name: ${lastName} , age: ${sen} , gender: ${sex}`;
+// // data-type
+// let firstName = prompt("what is your first name? ");
+// let lastName = prompt("what is your last name? ");
+// let sen = prompt("how old are you? ");
+// let sex = prompt("what is your gender? ");
+// alert(`first name: ${firstName} , last name: ${lastName} , your age is ${sen} and your gender is ${sex}`);
+// let biography = `first name: ${firstName} , last name: ${lastName} , age: ${sen} , gender: ${sex}`;
 
-alert(biography);
-document.getElementById("bio").innerHTML = biography;
+// alert(biography);
+// document.getElementById("bio").innerHTML = biography;
  
 // math
 // I.
@@ -177,3 +177,71 @@ function logicalGateXnor(w,v){
      }
   }
   console.log(factorialrecursive(fn2=3))
+
+  // functions
+  // I. Create an array of random numbers
+ 
+  const arrayrn=[]  
+  arrayrn.push(Math.floor(Math.random()*(50-15)+15));
+  arrayrn.push(Math.floor(Math.random()*(50-15)+15));
+  arrayrn.push(Math.floor(Math.random()*(50-15)+15));
+  arrayrn.push(Math.floor(Math.random()*(50-15)+15));
+  arrayrn.push(Math.floor(Math.random()*(50-15)+15));
+  arrayrn.push(Math.floor(Math.random()*(50-15)+15));
+  arrayrn.push(Math.floor(Math.random()*(50-15)+15));
+  console.log(arrayrn)
+
+  // II. MAP function
+
+function costumMap(ar=[], callback){
+  const out=[]
+  for(let i=0;i<ar.length;i++){
+  out.push(callback(ar[i]))
+  }
+  return out
+}
+const check1= costumMap(arrayrn,(m)=>{
+ return m +1500
+}
+)
+console.log(check1)
+
+// III. Filter function
+
+function costumFilter(ar=[],callback){
+ const out=[]
+  for(let i=0;i<ar.length;i++){
+      if(callback(ar[i])){
+  out.push(ar[i])
+      }
+  }
+return out
+}
+const check2= costumFilter(arrayrn,(n)=>{
+  return n = 0
+}
+)
+console.log(check2)
+
+// IV. Reduce
+
+function customReduce(arr, callback)
+{
+let initial = arr[0];
+
+for (let i = 1; i < arr.length; i++)
+{
+initial = callback(initial, arr[i], i);
+}
+return initial;
+}
+console.log(customReduce(arrayrn, (acc, cv) => acc + cv));
+
+
+
+
+
+
+
+
+
